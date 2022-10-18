@@ -1,0 +1,19 @@
+{{!-- 網站首頁內容 --}}
+
+<div class="container mt-5">
+  <div class="row ">
+    <h2 class="mb-5">Account Login</h2>
+      <form action="/accounts/login" method="post">
+        <div class="mb-5 ">
+          <input type="email" class="" name="accountInput" value="{{accountInput}}" placeholder="Email">
+        </div>
+        <div class="mb-5 col">
+          <input type="password" class="" name="passwordInput" placeholder="Password">
+        </div>
+        {{#if accountInput}}
+        <h4 class="mb-3">The account/password is wrong or the account is not existed.</h4>
+        {{/if}}
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+  </div>
+</div>
